@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>An example page</title>
+        <script type="text/javascript" src="output.js"></script>
+    </head>
+    <body>
+        <script>
+            function displayInfo(args) {
+                var info = "";
+                
+                if (typeof args.name == "string") {
+                    info += "Name: " + args.name + "<br>";
+                }
+                if (typeof args.age == "number") {
+                    info += "Age: " + args.age + "<br>";
+                }
+                output(info);
+            }
+            displayInfo({
+                name : "Tom",
+                age : 18
+            });
+            displayInfo({
+                name : "Jerry"
+            });
+        </script>
+    </body>
+</html>

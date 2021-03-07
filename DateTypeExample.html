@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>An example page</title>
+        <script type="text/javascript" src="output.js"></script>
+    </head>
+    <body>
+        <script>
+            var now = new Date();
+            // output(new Date(Date.parse("6/13/2009 13:13:13")));
+            // output(new Date(Date.parse("june 13, 2009 13:13:13")));
+            // output(new Date(Date.parse("sat June 13 2009 13:13:13 GMT+0800 ")));
+            // output(new Date(Date.parse("2009-06-13T13:13:13+08:00")));
+            // output(new Date(Date.UTC(2009, 5, 13, 13)));
+
+
+
+            output(now.toString());
+            output(now.toLocaleString());
+            output(now.toDateString());
+            output(now.toLocaleDateString());
+            output(now.toTimeString());
+            output(now.toLocaleTimeString());
+            output(now.toISOString());
+            output(now.toUTCString());
+        </script>
+    </body>
+</html>

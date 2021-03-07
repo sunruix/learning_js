@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>An example page</title>
+        <script type="text/javascript" src="output.js"></script>
+    </head>
+    <body>
+        <script>
+            // function func() {
+            //     return 0;
+            // }
+            // output(func instanceof Function);
+            // output(func instanceof Object);
+            // output(Function instanceof Object);
+
+
+
+            var func = function(num1, num2) {
+                return num1 + num2;
+            }
+
+            var func1 = func;
+            output("func's name is " + func.name + ", func1's name is " + func1.name);
+
+            function func2(arg_func) {
+                output("arg_func's name is " + '"' + arg_func.name + '"');
+                arg_func();
+            }
+            func2(function () { output("this is arg_func")});
+
+            function func3() {
+                return function () {
+                    return 1;
+                }
+            }
+            var rtf = func3();
+            output("the rtf's name is " + '"' + rtf.name + '", it returns', rtf());
+
+            // function showColor() {
+            //     output('color is', this.color);
+            //     output('this is', this);
+            // }
+            // var o = {
+            //     m1 : showColor,
+            //     color : "red"
+            // }
+            // var p = {
+            //     m2 : showColor,
+            //     color : "blue"
+            // }
+            // o.m1();
+            // p.m2();
+            // output(this)
+        </script>
+    </body>
+</html>

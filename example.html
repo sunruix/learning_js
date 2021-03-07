@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>An example page</title>
+        <script type="text/javascript" src="output.js"></script>
+    </head>
+    <body>
+        <script>
+            var age = 29;
+            function sayAge() {
+                output(this.age);
+            }
+            output(window.age);
+            sayAge();
+            window.sayAge();
+
+            output(delete age);
+            window.color = 'red';
+            output(delete color);
+
+            var newValue = oldValue;
+            var newValue = window.oldValue;
+            output(newValue);
+        </script>
+    </body>
+</html>
