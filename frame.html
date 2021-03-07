@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>An example page</title>
+        <script type="text/javascript" src="output.js"></script>
+    </head>
+    <body>
+        <script>
+            output("window.name =", window.name);
+            output(top.frames[0].name, "is the top frame");
+            output(top.frames['leftFrame'].name, "is the left frame");
+            output(top.frames[1].name, "is the right frame");
+        </script>
+    </body>
+</html>
