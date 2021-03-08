@@ -5,21 +5,22 @@
     </head>
     <body>
         <script>
-            var age = 29;
-            function sayAge() {
-                output(this.age);
-            }
-            output(window.age);
-            sayAge();
-            window.sayAge();
+            // output("this window is", window.name);
+            // output("parent is ", parent.name);
 
-            output(delete age);
-            window.color = 'red';
-            output(delete color);
+            // output("x:", window.screenX, " ", "y:", window.screenY);
+            // output("left", window.screenLeft, " ", "top:", window.screenTop);
+            // output("inner", window.innerHeight, window.innerWidth);
+            // output("outer", window.outerHeight, window.outerWidth);
+            // output(innerHeight, " ", outerHeight);
 
-            var newValue = oldValue;
-            var newValue = window.oldValue;
-            output(newValue);
+            // var bd = window.open("http://www.baidu.com", "baidu", "height=400, width=400");
+            output("kkkkkk");
+            var t1 = setTimeout(function () {
+                output("time out");
+            }, 2000);
+            output("dddd");
         </script>
+        <!-- <button type="button" onclick="bd.close()">close</button> -->
     </body>
 </html>

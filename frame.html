@@ -3,12 +3,17 @@
         <title>An example page</title>
         <script type="text/javascript" src="output.js"></script>
     </head>
+        <frameset cols="50%,50%">
+            <frame src="example.html" name="example"></frame>
+            <frame src="example.html" name="example2"></frame>
+        </frameset>
     <body>
         <script>
-            output("window.name =", window.name);
-            output(top.frames[0].name, "is the top frame");
-            output(top.frames['leftFrame'].name, "is the left frame");
-            output(top.frames[1].name, "is the right frame");
+            // output("window.name =", window.name);
+            // output(top.frames[0].name, "is the top frame");
+            // output(top.frames['leftFrame'].name, "is the left frame");
+            // output(top.frames[1].name, "is the right frame");
+            // output(parent == top);
         </script>
     </body>
 </html>
