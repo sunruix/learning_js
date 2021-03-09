@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>An location example page</title>
+        <script type="text/javascript" src="output.js"></script>
+    </head>
+    <body>
+        <script>
+            output(navigator.plugins);
+            for (var x in navigator.plugins) {
+                output(x, navigator.plugins[x].name);
+            }
+        </script>
+        <!-- <button type="button" onclick="bd.close()">close</button> -->
+    </body>
+</html>
