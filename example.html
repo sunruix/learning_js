@@ -5,21 +5,28 @@
     </head>
     <body>
         <script>
-            // output("this window is", window.name);
-            // output("parent is ", parent.name);
-
-            // output("x:", window.screenX, " ", "y:", window.screenY);
-            // output("left", window.screenLeft, " ", "top:", window.screenTop);
-            // output("inner", window.innerHeight, window.innerWidth);
-            // output("outer", window.outerHeight, window.outerWidth);
-            // output(innerHeight, " ", outerHeight);
-
-            // var bd = window.open("http://www.baidu.com", "baidu", "height=400, width=400");
-            output("kkkkkk");
-            var t1 = setTimeout(function () {
-                output("time out");
-            }, 2000);
-            output("dddd");
+            var js = "JavaScript";
+            var str;
+            while(true) {
+                str = window.prompt("Please input " + js);
+                if (str == js) {
+                    break;
+                }
+                else if (str == null) {
+                    if(confirm("Quit?")) {
+                        break;
+                    }
+                }
+                else {
+                    alert(str + " is not " + js);
+                }
+            }
+            if (str == js) {
+                output("you input " + str);
+            }
+            else {
+                output("you quit");
+            }
         </script>
         <!-- <button type="button" onclick="bd.close()">close</button> -->
     </body>

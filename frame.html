@@ -1,19 +1,33 @@
 <html>
     <head>
-        <title>An example page</title>
+        <title>An frame page</title>
         <script type="text/javascript" src="output.js"></script>
     </head>
-        <frameset cols="50%,50%">
+        <!-- <frameset cols="50%,50%">
             <frame src="example.html" name="example"></frame>
             <frame src="example.html" name="example2"></frame>
-        </frameset>
+        </frameset> -->
     <body>
         <script>
-            // output("window.name =", window.name);
-            // output(top.frames[0].name, "is the top frame");
-            // output(top.frames['leftFrame'].name, "is the left frame");
-            // output(top.frames[1].name, "is the right frame");
-            // output(parent == top);
+            var timeout = 1000;
+            if (window.name == 'topFrame') {
+                timeout += 1000;
+            }
+            else if (window.name == 'leftFrame') {
+                timeout += 2000;
+            }
+            else {
+                timeout += 3000;
+            }
+            var timeoutId = setTimeout(function () {
+                output("timeout call");
+            }, timeout);
+            var intervalId = setInterval(function () {
+                output("interval call");
+            }, 1000);
+            timeoutId = setTimeout(function () {
+                clearInterval(intervalId)
+            }, 1000 * 5);
         </script>
     </body>
 </html>
