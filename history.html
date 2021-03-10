@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>A history example page</title>
+        <script type="text/javascript" src="output.js"></script>
+    </head>
+    <body>
+        <script>
+            output("this is history page");
+            output("history records:", history.length);
+            function goLocation() {
+                location.assign("http://127.0.0.1:5500/Location.html");
+            }
+        </script>
+        <br>
+        <button type="button" onclick="goLocation()">go location</button>
+        <button type="button" onclick="history.forward()">forward</button>
+    </body>
+</html>

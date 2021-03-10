@@ -1,15 +1,21 @@
 <html>
     <head>
-        <title>An location example page</title>
+        <title>A location example page</title>
         <script type="text/javascript" src="output.js"></script>
     </head>
     <body>
         <script>
-            output(navigator.plugins);
-            for (var x in navigator.plugins) {
-                output(x, navigator.plugins[x].name);
+            // for (let prop in window.location) {
+            //     output(prop, ":", location[prop]);
+            // }
+            for (let i = 0; i < 100; ++i) {
+                output("should be blank line");
             }
+            output("this is location page");
+            output("history records:", history.length);
         </script>
-        <!-- <button type="button" onclick="bd.close()">close</button> -->
+        <br>
+        <button type="button" onclick="history.go(-1)">go back</button>
+        <a name="contents">some contents</a>
     </body>
 </html>

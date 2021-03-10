@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>hello world</title>
+        <script type="text/javascript" src="output.js"></script>
+    </head>
+    <body>
+        <p>Here's some text.</p>
+        <p>Here's more text.</p>
+        <p>Link to the <a id="w3link" href="http://www.w3.org">W3</a></p>
+        <script>
+            var w3link = document.getElementById("w3link");
+            output(w3link.href);
+            output(w3link.id);
+            
+
+            var ps = document.getElementsByTagName("p");
+            for (let i = 0; i < ps.length; ++i) {
+                output(ps[i].textContent);
+            }
+            function changeColors() {
+                var tds = document.getElementsByTagName("td");
+                for (let i = 0; i < tds.length; ++i) {
+                    tds[i].style.color = "red";
+                }
+            }
+        </script>
+        <table id="mytable" border="1">
+            <tr><td id="lefttd0">Left column</td><td id="righttd0">Right column</td></tr>
+            <tr><td id="lefttd1">Left column</td><td id="righttd1">Right column</td></tr>
+            <tr><td id="lefttd2">Left column</td><td id="righttd2">Right column</td></tr>
+        </table>
+        <button type="button" onclick="changeColors()">change colors</button>
+    </body>
+</html>
