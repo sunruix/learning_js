@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Create</title>
+        <script type="text/javascript" src="output.js"></script>
+    </head>
+    <body>
+        <p>Here's some text.</p>
+        <p>Here's more text.</p>
+        <p id="p3">Link to the <a id="w3link" href="http://www.w3.org">W3</a></p>
+        <script>
+            var w3link = document.getElementById("w3link");
+            var p3 = document.getElementById("p3");
+            for (let i = 0; i < p3.children.length; ++i) {
+                output(p3.children[i] == w3link);
+            }
+            function addElement() {
+                var newElement = document.createElement("p");
+                document.body.append(newElement);
+                newElement.appendChild(document.createTextNode("Hello, world"));
+                newElement.setAttribute("id", "new");
+            }
+
+            function removeElement() {
+                var ele = document.getElementById("w3link");
+                // document.body.removeChild(ele);
+                p3.removeChild(ele);
+            }
+
+            function addAgain() {
+                p3.append(w3link);
+            }
+        </script>
+        <br>
+        <button type="button" onclick="addElement()">hello</button>
+        <br>
+        <button type="button" onclick="removeElement()">remove</button>
+        <br>
+        <button type="button" onclick="addAgain()">restore</button>
+    </body>
+</html>

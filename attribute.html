@@ -12,9 +12,17 @@
             output(w3link.href);
             output(w3link.id);
             
-            output(w3link.getAttribute("id"));
-            output(w3link.getAttribute("href"));
-            output(typeof w3link.getAttribute("id"));
+            function outputAttri(id) {
+                var element = document.getElementById(id);
+                for (attri in element) {
+                    output(attri, ":", element[attri]);
+                }
+            }
+            // outputAttri("p3");
+            w3link.setAttribute("href", "http://www.kkk.fff");
+            output(w3link.href);
+            w3link.href = "http://kkk.ddd.ccc";
+            output(w3link.href);
         </script>
         <!-- <table id="mytable" border="1">
             <tr><td id="lefttd0">Left column</td><td id="righttd0">Right column</td></tr>
