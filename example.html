@@ -5,29 +5,13 @@
     </head>
     <body>
         <script>
-            var js = "JavaScript";
-            var str;
-            while(true) {
-                str = window.prompt("Please input " + js);
-                if (str == js) {
-                    break;
-                }
-                else if (str == null) {
-                    if(confirm("Quit?")) {
-                        break;
-                    }
-                }
-                else {
-                    alert(str + " is not " + js);
-                }
-            }
-            if (str == js) {
-                output("you input " + str);
-            }
-            else {
-                output("you quit");
+            output("platform:", navigator.platform);
+            output("version:", navigator.appVersion);
+            output("vendor:", navigator.vendor);
+            output("language:", navigator.language);
+            for (let i = 0; i < navigator.plugins.length; ++i) {
+                output("plugin", i + 1, ":", navigator.plugins[i].name);
             }
         </script>
-        <!-- <button type="button" onclick="bd.close()">close</button> -->
     </body>
 </html>

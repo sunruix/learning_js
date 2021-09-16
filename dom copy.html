@@ -8,6 +8,10 @@
         <p>Here's more text.</p>
         <p>Link to the <a id="w3link" href="http://www.w3.org">W3</a></p>
         <script>
+            var w3link = document.getElementById("w3link");
+            output(w3link.href);
+            output(w3link.id);
+            
             var ps = document.getElementsByTagName("p");
             for (let i = 0; i < ps.length; ++i) {
                 output(ps[i].textContent);

@@ -4,18 +4,20 @@
         <script type="text/javascript" src="output.js"></script>
     </head>
     <body>
+        <!-- <button type="button" onclick="location.hash = '#contents'">go contents</button> -->
+        <!-- <button type="button" onclick="location.search = '?name=Tom&age=29'">show search</button> -->
         <script>
-            // for (let prop in window.location) {
+            // for (let prop in location) {
             //     output(prop, ":", location[prop]);
             // }
-            for (let i = 0; i < 100; ++i) {
-                output("should be blank line");
-            }
+            // for (let i = 0; i < 100; ++i) {
+            //     output("should be a blank line");
+            // }
             output("this is location page");
             output("history records:", history.length);
         </script>
         <br>
         <button type="button" onclick="history.go(-1)">go back</button>
-        <a name="contents">some contents</a>
+        <!-- <a name="contents">some contents</a> -->
     </body>
 </html>
