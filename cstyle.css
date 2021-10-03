@@ -1,0 +1,19 @@
+h2 {
+    color:rgb(68, 126, 11)
+}
+
+.intro {
+    text-indent: 2em;
+}
+
+#wrapper {
+    margin: 0 10%;
+}
+
+* {
+    color:chocolate;
+}
+
+h1, p, .indent {
+    color: black;
+}

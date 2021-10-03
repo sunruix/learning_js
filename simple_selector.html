@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple selector</title>
+        <link rel="stylesheet" href="simple_selector.css"/>
+    </head>
+    <body>
+        <div class="container wrapper">
+            <div id="top">
+                <h1>欢迎访问我的首页</h1><br>
+                <p>请使用菜单来选择不同的样式表。</p>
+            </div>
+            <div class="wrapper">
+                <div id="menubar">
+                    <ul id="menulist">
+                        <li class="menuitem" onclick="reStyle(0)">样式表 1</li>
+                        <li class="menuitem" onclick="reStyle(1)">样式表 2</li>
+                        <li class="menuitem" onclick="reStyle(2)">样式表 3</li>
+                        <li class="menuitem" onclick="reStyle(3)">样式表 4</li>
+                        <li class="menuitem" onclick="noStyles()">无样式表</li>
+                    </ul>
+                </div>
+                <div id="main">
+                    <h1>相同页面不同的样式表</h1>
+                    <p>这是不同样式表如何更改HTML页面布局的演示。您可以通过在菜单中选择不同的样式表或选择以下链接之一来更改此页面的布局：<br>
+                        <a href="#" onclick="reStyle(0);return false">样式表1</a>,
+                        <a href="#" onclick="reStyle(1);return false">样式表2</a>,
+                        <a href="#" onclick="reStyle(2);return false">样式表3</a>,
+                        <a href="#" onclick="reStyle(3);return false">样式表4</a>.
+                    </p>
+                    <h2>无样式</h2>
+                    <p>此页面使用 div 元素对 HTML 页面的不同部分进行分组。单击此处查看没有样式表的页面的外观：<br><a href="#" onclick="noStyles();return false">无样式表</a>。</p>
+                </div>
+                <div id="sidebar">
+                    <h3>侧栏</h3>
+                    <p>侧边栏其实就是一种比较经典的网站导航设计，它的形式通常为竖向的一列，展示在网站的右侧或者左侧，具体的位置当然是取决于整体的设计。</p>
+                </div>
+            </div>  
+            
+            <div id="bottom">
+                <p>网站的页脚是位于每个页面底部的内容区域，在主内容的下面。</p>
+                <p>术语“页脚”来自于印刷，其中页脚是贯穿文档所有页面的一致性设计元素。</p>
+            </div>
+        </div>
+    </body>
+</html>
