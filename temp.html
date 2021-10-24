@@ -23,8 +23,22 @@
   </style>
 </head>
 <body>
+  <ol>
+    lllllllll1
+    lllllllll2
+  </ol>
   <div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
   <p id="ddd">dasdfasdf</p>
   <span id="ddd">fasdfasdfsd</span>
+  <script>
+    function disStyle() {
+      for (let i in document.styleSheets) {
+        document.styleSheets[i].disabled = true;
+      }
+      // document.styleSheets[0].disabled = true;
+    }
+    disStyle();
+  </script>
+  <link rel="stylesheet" href="style1.css"/>
 </body>
 </html>
