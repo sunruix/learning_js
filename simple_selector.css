@@ -15,7 +15,7 @@
 }
 
 th ~ td {
-    display: none;
+    /* display: none; */
 }
 
 th, td {
