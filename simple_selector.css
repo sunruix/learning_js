@@ -30,5 +30,5 @@ table {
 }
 
 th:hover ~ td {
-    display: block;
+    display: inline;
 }
